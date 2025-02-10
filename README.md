@@ -11,13 +11,14 @@ This repository provides all necessary scripts and instructions to reproduce the
 ## 📂 Repository Structure
 
 ```
-├── data/                # How to get the data
-├── notebooks/           # Jupyter notebooks for step-by-step analysus
-│   ├── python/          # Python-based analysis notebooks
-│   │   ├── environment.yml  # Conda environment for Python
-│   ├── R/               # R-based analysis notebooks
-│   │   ├── environment.yml  # Conda environment for R
-├── README.md           # This README file
+├── data/                           # How to get the raw data
+├── notebooks/                      # Jupyter notebooks for step-by-step analysus
+│   ├── scRNAseq/                   # Analysis notebooks for single-cell data
+|   ├── spatial/                    # Analysis notebooks for spatial transcriptomics data
+├── environments/                   # Conda environments to run these analysis
+│   ├── environment_CSF_python.yml  # Conda environment for Python
+│   ├── environment_CSF_R.yml       # Conda environment for R
+├── README.md                       # This README file
 ```
 
 ## 🚀 Getting Started
