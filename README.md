@@ -63,6 +63,6 @@ If you use this code in your research, please cite our paper:
 
 ## 📞 Contact
 
-For questions or issues, please open an issue in this repository or contact [Paula Nieto](mailto:paula.nieto@cnag.eu). 
+For questions or issues, please [open an issue](https://github.com/Single-Cell-Genomics-Group-CNAG-CRG/CSF/issues/new/choose) in this repository or contact [Paula Nieto](mailto:paula.nieto@cnag.eu). 
 
 ---
