@@ -47,7 +47,7 @@ conda activate scRNAseq_R
 
 ### 📊 Usage
 
-Run the analysis step by step using Jupyter notebooks:
+After activating the corresponding environment(R/python), run the analysis step by step using Jupyter notebooks:
 
 1. Open Jupyter Notebook:
    ```bash
