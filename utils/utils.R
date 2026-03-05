@@ -213,3 +213,38 @@ pal_k_l <- list("IGKC+" = "#d6604d", "IGKC-" = "#4393c3", `NA` = "black")
 
 # -------------------------------
 
+
+marker_genes <- list(
+  "CD4 Naive/CM" = c("CD4", "ANXA1", "PASK", "SELL", "LEF1", "NOSIP", "CCR7", "TCF7", "ACTN1", "FOXP1", "KLF2", "ITGA6", "CD8A-", "CD8B-", "GZMK-"),
+  "CD4 Effector/Mem" = c("CD4", "ZNF683", "KLRB1", "PRDM1", "CX3CR1", "EOMES", "KLRG1", "TNFSF13B", "GZMK", "CCL5", "CCL4", "NKG7", "CD69", "ITGAE", "CD8A-", "CD8B-"),
+  "T helper" = c("CD4", "CXCR3", "GATA3", "RORC", "RORA", "IL17F", "IL17A", "CCR6", "CXCR6", "IFNG", "IL4", "IL6ST", "CXCR5", "CXCL13", "PDCD1", "CD8A-", "CD8B-"),
+  "CD4 IFN response" = c("CD4", "IFI16", "IFI35", "IFI44", "IFI44L", "IFI6", "IFIH1", "IFIT1", "IFIT2", "IFIT3", "IFIT5", "ISG15", "CD8A-", "CD8B-"),
+  "CD4 Proliferative" = c("CD4", "MKI67", "TOP2A", "STMN1", "UBE2C", "PCLAF", "CENPF", "CDK1", "CD8A-", "CD8B-"),
+  "T reg" = c("IL32", "CCR7", "LEF1", "TCF7", "FOXP3", "CTLA4", "IL2RA", "ICOS", "TIGIT", "TOX2", "IKZF2", "GATA3", "CD28", "CD8A-", "CD8B-"),
+  "Gamma Delta" = c("TRGC1", "TRGC2", "TRDC", "CD8A-", "CD8B-", "CD4-"),
+  # "MAIT" = c("KLRB1, IL7R", "SLC4A10"),
+  "CD8 Naive/CM" = c("CD4-", "ANXA1", "PASK", "SELL", "LEF1", "NOSIP", "CCR7", "TCF7", "ACTN1", "FOXP1", "KLF2", "ITGA6", "CD8A", "CD8B", "GZMK-"),
+  "CD8 Mem" = c("CD8A", "CD8B", "ZNF683", "KLRB1", "PRDM1", "CX3CR1", "EOMES", "KLRG1", "TNFSF13B", "CD4-"),
+  "CD8 Cytotoxic" = c("CD8A", "CD8B", "GZMK", "GZMH", "CCL5", "CCL4", "CD69", "PRF1", "ITGAE", "CD4-", "CST7", "GZMA", "CCL4L2", "CTSW", "GZMH", "GZMM", "HLA-C"),
+  "CD8 IFN response" = c("CD8A", "CD8B", "IFI16", "IFI35", "IFI44", "IFI44L", "IFI6", "IFIH1", "IFIT1", "IFIT2", "IFIT3", "IFIT5", "ISG15", "CD4-"),
+  "CD8 Exhausted" = c("CD8A", "CD8B", "HAVCR2", "LAG3", "PDCD1", "TIGIT", "TOX", "TOX2", "LAYN", "CTLA4", "CD4-"),
+  "CD8 Proliferative" = c("CD8A", "CD8B", "MKI67", "TOP2A", "STMN1", "UBE2C", "PCLAF", "CENPF", "CDK1", "CD4-"),
+  # "ILC" = c("KIT", "NCR1", "KLRG1"),
+  "NK" = c("NCAM1", "FCGR3A", "CX3CR1", "GNLY", "KLRC2", "KLRD1", "KLRC3", "KLRK1", "KLRC1", "NKG7", "XCL2", "KLRB1", "PRF1", "TRDC"),
+  # "Immature B cell" = c("MS4A1", "CD79A", "CD19", "RAG1", "RAG2", "CD3E-", "CD3G-", "CD3D-", "CD4-", "CD8A-", "CD8B-"),
+  "Naive B cell" = c("MS4A1", "IGHD", "IGHM", "CCR7", "SELL", "TCL1A", "CD79A", "VPREB3", "FCRL1", "NIBAN3", "CD79B", "HVCN1", "CD72", "FCER2", "CD83", "CD19", "CD3E-", "CD3G-", "CD3D-", "CD4-", "CD8A-", "CD8B-"),
+  "Memory B cell" = c("CD79A", "MS4A1", "CD27", "TNFRSF13B", "ITGAX", "PRDM1", "CD24", "BANK1", "CD74", "HLA-DRA", "IGHA1", "BLK", "SPIB", "P2RX5", "IGHA2", "CD37", "CD3E-", "CD3G-", "CD3D-", "CD4-", "CD8A-", "CD8B-"),
+  "Plasma cells" = c("MZB1", "SDC1", "IGHG1", "JCHAIN", "IGHA1", "IGHG3", "IGLC3", "IGLC1", "IGHGP", "DERL3", "IGHG4", "XBP1", "IRF4", "CD3E-", "CD3G-", "CD3D-", "CD4-", "CD8A-", "CD8B-"),
+  "Monocytes" = c("CD14", "S100A8", "S100A9", "LYZ", "VCAN", "FCN1"),
+  "M1 Macrophages" = c("HLA-DPB1", "HLA-DPA1", "HLA-DQA1", "HLA-DQB1", "HLA-DQA2", "HLA-DMA", "HLA-DRB5", "HLA-DRB1", "HLA-DRA", "HLA-DMB", "HLA-DQB2", "APOE", "APOC1", "CD68", "C1QA","C1QB", "C1QC","CCL2","IL1B","CCL4","CCL7","CCL8","NFKB","CD40", "CXCL2", "CXCL3", "CXCL9", "CXCL10","CXCL11","IDO1","NFKBIA", "TNF","CXCL8","G0S2","IL6","INHBA", "CD14-", "LYZ-", "VCAN-", "FCN1-"),
+  "M2 Macrophages" =  c("APOE", "APOC1", "CD68", "C1QA","C1QB", "C1QC","CD68", "SELENOP", "MRC1", "CCL18","CD163", "CD209", "ARG1", "IL10", "CD274","CHIT1", "RNASE1", "TREM2", "IL10", "ITGA4", "LGALS9", "MARCO", "TGFB2", "TGFB1", "CSF1R", "CSF1", "SPP1","TREM2", "CD14-", "LYZ-", "VCAN-", "FCN1-"),
+  "Myeloid proliferative" = c("CD68", "CD163", "MKI67", "TOP2A", "STMN1", "UBE2C", "PCLAF", "CENPF", "CDK1"),
+  "Alveolar macrophages" = c("GPNMB", "SPP1", "CTSB", "C1QC", "C1QB", "APOC1", "APOE", "GLUL", "C1QA", "HMOX1", "FTL", "FN1", "PLTP", "MARCO", "CD163", "CD68", "CTSL",   "TREM2",  "TMIGD3", "FCGRT",  "CTSD"),
+  "pDC" = c("IL3RA", "IRF7", "LILRA4", "IRF8", "JCHAIN", "GZMB"),
+  "DC1" = c("CLEC9A", "XCR1", "IDO1", "CLNK", "ZNF366"),
+  "DC2" = c("CD1C", "FCER1A", "CLEC10A"),
+  "DC3" = c("CD1C", "S100A8", "S100A9", "ANXA1"),
+  "DC4" = c("ITGAX", "FCGR3A", "SERPINA1", "LILRB2", "SIGLEC10"),
+  "DC5" = c("AXL", "SIGLEC6", "CD22", "DAB2"),
+  "Mesothelial cells" = c("UPK3B", "KRT7", "CDH2", "PECAM1", "PRG4")
+)
